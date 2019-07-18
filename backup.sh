@@ -1,5 +1,5 @@
 #!/bin/bash
-routers=( xxx.xxx.xxx.xxx )
+routers=( xxx.xxx.xxx.xxx yyy.yyyy.yyyy.yyy zzz.zzz.zzz.zzz) #Type as many as you wish
 backupdir="/home/backup/mikrotik"
 privatekey="/root/.ssh/id_dsa"
 login="backup"
