@@ -1,5 +1,5 @@
 #!/bin/bash
-routers=( 80.241.254.82 213.131.48.46 109.238.235.162 )
+routers=( xxx.xxx.xxx.xxx )
 backupdir="/home/backup/mikrotik"
 privatekey="/root/.ssh/id_dsa"
 login="backup"
@@ -23,15 +23,3 @@ for r in ${routers[@]}; do
     ssh ${login}@$r -i $privatekey "/file remove \"${r}.backup\""
     ssh ${login}@$r -i $privatekey "/file remove \"${r}.rsc\""
 done
-
-
-
-#########################
-# 1. Create a key using ssh-keygen
-# %ssh-keygen -t dsa
-# 
-# 2. import
-# /user ssh-keys private import user=remote private-key-file=mykey public-key-file=mykey.pub passphrase=""
-#
-#
-#############################
